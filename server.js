@@ -11,7 +11,8 @@ const server = new Hapi.Server();
 server.connection({ port: Settings.port });
 
 server.register([
-  require('vision')
+  require('vision'),
+    require('inert')
 ], (err) => {
   Hoek.assert(!err, err);
 
